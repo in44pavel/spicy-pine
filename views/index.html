@@ -1,0 +1,105 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  
+  <body>
+  <header>
+    <h3>
+    API Project: Timestamp Microservice
+    </h3>
+  </header>
+    
+   <main> <h4>
+     TASK:
+     </h4>
+    <ul>
+      <li>The API endpoint is GET [project_url]/api/timestamp/:date_string?
+A date string is valid if can be successfully parsed by new Date(date_string).
+Note that the unix timestamp needs to be an integer (not a string) specifying milliseconds.
+In our test we will use date strings compliant with ISO-8601 (e.g. "2016-11-20") because this will ensure an UTC timestamp.</li>
+      <li>If the date string is empty it should be equivalent to trigger new Date(), i.e. the service uses the current timestamp.</li>
+      <li>If the date string is valid the api returns a JSON having the structure
+{"unix": date.getTime(), "utc" : date.toUTCString() }
+e.g. {"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</li>
+      <li>If the date string is invalid the api returns a JSON having the structure 
+{"error" : "Invalid Date" }.</li>
+     
+     </ul>
+     
+    
+    <hr><h4>EXAMPLES:</h4>
+        <div class="examples">
+        <div class="testing">Testing<br>
+    <a href="https://spicy-pine.glitch.me/api/timestamp/2016-12-25">2016-12-25</a><br>
+    <a href="https://spicy-pine.glitch.me/api/timestamp/1482624000000">1482624000000</a><br>
+    <a href="https://spicy-pine.glitch.me/api/timestamp/">blank</a><br>
+    <a href="https://spicy-pine.glitch.me/api/timestamp/2015d">invalid</a>
+        </div>
+        <div class="output">Output<br>
+          {"unix":1451001600000, 
+          "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}
+          
+        </div>
+    </div>
+  </main> 
+     <footer> coded by <a href="https://github.com/in44pavel">in44pavel</a> as a freecodecamp 
+       <a href="https://learn.freecodecamp.org/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice/">challenge</a> 
+    </footer>
+    
+    
+  <!-- from Glith template
+  
+    <header>
+      <h1>
+        A Dream of the Future
+      </h1>
+    </header>
+
+    <main>
+      <p class="bold">Oh hi,</p>
+      
+      <p>Tell me your hopes and dreams:</p>
+      
+      <form>
+        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
+        <button type="submit" id="submit-dream">Submit Dream</button>
+      </form>
+      
+      <section class="dreams">
+        <ul id="dreams"></ul>
+      </section>
+    </main>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+-->
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <!--div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script-->
+
+  </body>
+</html>
