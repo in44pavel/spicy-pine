@@ -4,7 +4,7 @@
   "//3": "updating this file will download and update your packages",
   "name": "hello-express",
   "version": "0.0.1",
-  "description": "FCC challenge for APIs and Microservices",
+  "description": "Project#1. FCC challenge  for APIs and Microservices",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
